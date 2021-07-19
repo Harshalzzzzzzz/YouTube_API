@@ -13,3 +13,10 @@ class Videos(models.Model):
 
     def __str__(self):
         return self.title
+
+    @property
+    def video_url(self):
+        try:
+            return ' '.join(["https://www.youtube.com/watch?v=", self.video_id])
+        except:
+            raise AttributeError("Video Url not Found")
