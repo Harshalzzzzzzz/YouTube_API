@@ -7,21 +7,20 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Videos',
+            name="Videos",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('video_id', models.CharField(max_length=500, unique=True)),
-                ('title', models.CharField(max_length=150)),
-                ('description', models.CharField(max_length=200)),
-                ('published_at', models.DateTimeField()),
-                ('thumbnail_url', models.URLField()),
-                ('channel_title', models.CharField(max_length=150)),
-                ('channel_id', models.CharField(max_length=100)),
+                ("id", models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("video_id", models.CharField(max_length=500, unique=True)),
+                ("title", models.CharField(max_length=150)),
+                ("description", models.CharField(max_length=200)),
+                ("published_at", models.DateTimeField()),
+                ("thumbnail_url", models.URLField()),
+                ("channel_title", models.CharField(max_length=150)),
+                ("channel_id", models.CharField(max_length=100)),
             ],
         ),
     ]
