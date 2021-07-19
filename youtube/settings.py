@@ -122,6 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+API_KEY = ["AIzaSyDNd8Uwm33pfJ8AegDkN-Yp9vSms5Tk2f4", "API2", "API3"]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
