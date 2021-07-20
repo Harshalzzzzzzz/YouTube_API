@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-# YouTube API KEYS : https://console.developers.google.com/apis/enabled
+# YouTube API KEYS
 API_KEY = [
     "AIzaSyDNd8Uwm33pfJ8AegDkN-Yp9vSms5Tk2f4",
     "AIzaSyA_85-K4Nt6eMEr630rTggtFPcs-2wY_Wg",
@@ -141,7 +141,7 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
 }
 
-# Cronjob Setup https://django-cron.readthedocs.io/en/latest/installation.html
+# Cronjob Setup
 CRON_CLASSES = [
     "api.cron.YoutubeApiRequest",
 ]
