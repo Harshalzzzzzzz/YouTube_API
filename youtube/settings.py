@@ -120,6 +120,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+# YouTube API KEYS : https://console.developers.google.com/apis/enabled
 API_KEY = [
     "AIzaSyDNd8Uwm33pfJ8AegDkN-Yp9vSms5Tk2f4",
     "AIzaSyA_85-K4Nt6eMEr630rTggtFPcs-2wY_Wg",
@@ -127,18 +128,20 @@ API_KEY = [
     "AIzaSyDT-R9AtOOly0vqZM4KjqPp-RFtAuQuaXo",
 ]
 
+# Cronjob Settings, default search query
 BACKGROUND_UPDATE = {
-    "name": "YT_JOB",
-    "search_query": "anime",
-    "func_name": "search_api.services.video_update",
+    "search_query1": "anime",
+    "search_query2": "football"
 }
 
+# To Enable Pagination
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     "PAGE_SIZE": 10,
 }
 
+# Cronjob Setup https://django-cron.readthedocs.io/en/latest/installation.html
 CRON_CLASSES = [
     "api.cron.YoutubeApiRequest",
 ]
