@@ -30,6 +30,7 @@ $ python3 manage.py migrate
 - [Django-cron](https://django-cron.readthedocs.io/en/latest/installation.html) lets you run Django/Python code on a recurring basis proving basic plumbing to track and execute tasks.
 - [Django REST framework](https://www.django-rest-framework.org/tutorial/3-class-based-views/#using-generic-class-based-views) for the interface.
 - [Docker Compose](https://docs.docker.com/samples/django/) to set up and run a simple Django app.
-- [Youtube API Key]() 
+- [Django Filter](https://django-filter.readthedocs.io/en/stable/guide/rest_framework.html#quickstart)  
+- [Youtube API Key](https://console.developers.google.com/apis/enabled) 
 - [Youtube API Documentation](https://developers.google.com/youtube/v3/docs/search/list)
 
