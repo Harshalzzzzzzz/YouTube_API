@@ -11,18 +11,21 @@ from django.core.paginator import Paginator
 from django.http import JsonResponse
 
 
+# Pagination to control how many objects per page are returned.
 class ResultsPagination(CursorPagination):
     page_size = 25
     page_size_query_param = "page_size"
     max_page_size = 100
 
 
+# Generic class-based view
 class VideoItems(generics.ListAPIView):
     search_fields = ["title", "description"]
     filter_backends = (filters.SearchFilter, DjangoFilterBackend, filters.OrderingFilter)
     filterset_fields = ["channel_id", "channel_title"]
     ordering = "-published_at"
     queryset = Videos.objects.all()
+    # VideoSerializer converts Video model's instances into representations such as json
     serializer_class = VideoSerializer
     pagination_class = ResultsPagination
 
