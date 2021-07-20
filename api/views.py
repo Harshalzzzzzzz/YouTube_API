@@ -4,6 +4,8 @@ from ._serialize import VideoSerializer
 # Rest FrameWork
 from rest_framework import generics
 from rest_framework.pagination import CursorPagination
+
+# Django-filter to filter down the queryset with the model’s fields based on parameters
 from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 
